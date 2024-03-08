@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>registration</title>
+    <link rel="stylesheet" href="css/registration.css">
+
+</head>
+
+<body>
+    <!-- шапку вообще не трогала -->
+    <header>
+
+        <div class="grid">
+            <nav class="navigation">
+                <ul class="navigation__list navigation__list--inline">
+                    <li class="navigation__item"><a href="/home" class="navigation__link ">Домашняя страница</a></li>
+                    <li class="navigation__item"><a href="/information" class="navigation__link">Информация</a></li>
+                    <li class="navigation__item"><a href="/registration"
+                            class="navigation__link navigation__link--is-active">Регистрация</a></li>
+                    <li class="navigation__item"><a href="/auth/login" class="navigation__link">Авторизация</a></li>
+                    <li class="navigation__item"><a href="/dashboard" class="navigation__link">Дашборд</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- весь блок с регистрацией -->
+        <div class="container registration_container">
+            <!-- сам блок регистрации -->
+            <form action="" method="post" class="registration_form" id="registration_f">
+                <!-- создала этот блок для редактирования отступов и расположения элементов блока' -->
+                <div class="data-entry">
+                    <!-- элемент регистрации -->
+                    <div class="form_block">
+                        <!-- пояснение(что именно нужно вводить) -->
+                        <label for="username">Имя пользователя: </label> <br>
+                        <!-- поле для ввода -->
+                        <input type="text" name="username" id="username" required placeholder="Артём" />
+                    </div>
+                    <!-- элемент регистрации -->
+                    <div class="form_block">
+                        <!-- пояснение(что именно нужно вводить) -->
+                        <label for="password">Пароль пользователя: </label> <br>
+                        <!-- поле для ввода -->
+                        <input type="password" name="password" id="password" required placeholder="Пароль" />
+                    </div>
+                    <div class="form_block">
+                        <!-- пояснение(что именно нужно вводить) -->
+                        <label for="email">Почта: </label> <br>
+                        <!-- поле для ввода -->
+                        <input type="email" name="email" id="email" required placeholder="mail@mail.ru" />
+                    </div>
+                    <div class="form_block">
+                        <!-- пояснение(что именно нужно вводить) -->
+                        <label for="department">Отдел: </label> <br>
+                        <!-- поле для ввода -->
+                        <select id="department" name="department" form="registration_f">
+                            <option value=0>Отдел Хороший людей</option>
+                            <option value=1>Отдел скурпулезного зачета без отчета</option>
+                            <option value=2>Выф выф выф выф</option>
+                            <option value=3>Отдел любителей песиков мосиков</option>
+                        </select>
+                    </div>
+                    <div class="form_block">
+                        <!-- пояснение(что именно нужно вводить) -->
+                        <label for="post">Должность: </label> <br>
+                        <!-- поле для ввода -->
+                        <select id="post" name="post" form="registration_f">
+                            <option value=0>Самый Важный</option>
+                            <option value=1>не очень важный</option>
+                            <option value=2>очень не важный</option>
+                            <option value=3>Прям вооообще не вжаный</option>
+                        </select>
+                    </div>
+                    <!-- кнопка для отправки формы (настраивать ее нужно через бэк) -->
+                    <button>Зарегистрироваться</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+
+
+</body>
+
+</html>

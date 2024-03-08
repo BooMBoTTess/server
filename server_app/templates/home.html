@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Пример веб-страницы</title>
+        <link rel="stylesheet" href="../static/css/registration.css">
+      </head>
+
+  <header>
+    <div class="grid">
+      <nav class="navigation">
+        <ul class="navigation__list navigation__list--inline">
+          <li class="navigation__item"><a href="/home" class="navigation__link navigation__link--is-active">Отделы</a></li>
+          <li class="navigation__item"><a href="/home/my_dep" class="navigation__link">Мой отдел</a></li>
+          <li class="navigation__item"><a href="/auth/registration" class="navigation__link">Обо мне</a></li>
+          <li class="navigation__item"><a href="/auth/login" class="navigation__link">Авторизация</a></li>
+          <li class="navigation__item"><a href="/dashboard" class="navigation__link">Дашборд</a></li>
+          <li class="navigation__item">{{user_info['ФИО']}}</li>
+          <li class="navigation__item">{{user_info['Отдел']}}</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <body>
+    <main class="home">
+
+
+    <section class="cards-wrapper">
+    {% for key, value in departments.items() %}
+      <div class="card-grid-space">
+        <div class="num"></div>
+        <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+            <h1>{{value[0]}}</h1>
+            {% if value | length == 1 %}
+                <p>Глава отдела:<br><b>Нет главы отдела</b></p>
+            {% else %}
+                <p>Глава отдела:<br><b>{{value[1]}}</b></p>
+            {% endif %}
+        </a>
+      </div>
+    {% endfor %}
+
+    </section>
+
+
+    </main>
+ </body>
+
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Дашборд</title>
+  <link rel="stylesheet" href="../static/css/registration.css">
+</head>
+<body>
+  <header>
+    <div class="grid">
+      <nav class="navigation">
+        <ul class="navigation__list navigation__list--inline">
+          <li class="navigation__item"><a href="/home" class="navigation__link">Отделы</a></li>
+          <li class="navigation__item"><a href="/home/my_dep" class="navigation__link">Мой отдел</a></li>
+          <li class="navigation__item"><a href="/auth/registration" class="navigation__link">Регистрация</a></li>
+          <li class="navigation__item"><a href="/auth/login" class="navigation__link">Авторизация</a></li>
+          <li class="navigation__item"><a href="/dashboard" class="navigation__link navigation__link--is-active">Дашборд</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <iframe src="http://{{IP_ADDRESS}}:8050/{{permition}}" scrolling="no">Дашборд сотрудников отделов МБУ ФК</iframe>
+
+</body>
+</html>

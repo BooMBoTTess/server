@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../static/css/registration.css">
+
+</head>
+<body>
+  <header>
+    <div class="grid">
+      <nav class="navigation">
+        <ul class="navigation__list navigation__list--inline">
+          <li class="navigation__item"><a href="/home" class="navigation__link">Отделы</a></li>
+          <li class="navigation__item"><a href="/home/my_dep" class="navigation__link navigation__link--is-active">Мой отдел</a></li>
+          <li class="navigation__item"><a href="/auth/registration" class="navigation__link">Обо мне</a></li>
+          <li class="navigation__item"><a href="/auth/login" class="navigation__link">Авторизация</a></li>
+          <li class="navigation__item"><a href="/dashboard" class="navigation__link">Дашборд</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+       <h1 class="dep_title">{{department}}</h1>
+
+        <div class="department_container">
+            {% for item in workers %}
+            <div class="department_card">
+                <img src="../static/img/person.png" alt="Person" class="card__image">
+                    <p class="card__name">{{ item[0] }}</p>
+                <div class="grid-container">
+                    <div class="grid-child-followers">
+                        {{ item[2] }}
+                    </div>
+                </div>
+                    <button class="btn" id="info" onclick="location.href='#';">О сотруднике</button>
+                    <button class="btn" id="fire" onclick="location.href='#';">Уволить</button>
+            </div>
+            {% endfor %}
+        </div>
+  </main>
+</body>
+</html>

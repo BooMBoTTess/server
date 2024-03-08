@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Пример веб-страницы</title>
+    <link rel="stylesheet" href="css/home_2.css">
+    <link rel="stylesheet" href="../css/home_2.css">
+</head>
+
+<body>
+    <header>
+        <div class="grid">
+            <nav class="navigation">
+                <ul class="navigation__list navigation__list--inline">
+                    <li class="navigation__item"><a href="/home"
+                            class="navigation__link navigation__link--is-active">Отделы</a>
+                    </li>
+                    <!--        <li class="navigation__item"><a href="/about" class="navigation__link">О нас</a></li>-->
+                    <li class="navigation__item"><a href="/information" class="navigation__link">Информация</a></li>
+                    <li class="navigation__item"><a href="/auth/registration" class="navigation__link">Регистрация</a>
+                    </li>
+                    <li class="navigation__item"><a href="/auth/login" class="navigation__link">Авторизация</a></li>
+                    <li class="navigation__item"><a href="/dashboard" class="navigation__link">Дашборд</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- основной текст на странице -->
+        <h1>Уважаемые дамы и господа, в данной штуке будет написана какая-то важная иформация, которая
+            будет использоватсься против вас</h1>
+
+        <!-- оболчка всех карточек -->
+        <section class="cards-wrapper">
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br>
+                        <b>Божественный мужчина или женщина</b>
+                    </p>
+                </a>
+            </div>
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br><b>Божественный мужчина или женщина</b></p>
+                </a>
+            </div>
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br><b>Божественный мужчина или женщина</b></p>
+                </a>
+            </div>
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br><b>Божественный мужчина или женщина</b></p>
+                </a>
+            </div>
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br><b>Божественный мужчина или женщина</b></p>
+                </a>
+            </div>
+            <!-- карточка отдела -->
+            <div class="card-grid-space">
+                <!-- картинку не трогала -->
+                <a class="card" href="/home/{{ key }}" style="--bg-img: url('/src/1.jpg')">
+                    <h1>Отдел ведения морских котиков</h1>
+                    <p>Глава отдела:<br><b>Божественный мужчина или женщина</b></p>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+
+</html>

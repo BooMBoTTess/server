@@ -1,0 +1,73 @@
+/* Цветовая палитра https://colorscheme.ru/#3G422rolgw0w0*/
+
+body {
+margin: 0;
+    font-family: sans-serif;
+}
+h1 {
+    background-color: #082149;
+    border-radius: 5px;
+    padding:10px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    color: white;
+    text-align: right;
+    margin: 0px;
+
+}
+
+.wrap_graph {
+
+}
+
+.up_wrap_graph {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    flex-shrink: 0;
+}
+
+.dash-graph {
+    flex: 1;
+    width: auto;
+    border: 5px solid #193B70;
+
+}
+
+#dep-graph {
+    width: auto;
+    height: 950px;
+
+}
+
+.header {
+    background-color: #193B70;
+    padding: 10px;
+
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.data {
+    display: block;
+}
+
+#refresh-btn {
+    width: 50%;
+    height: auto;
+    color: white;
+    background-color: #008cf0;
+    border: solid 5px #00508a;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+#refresh-btn:hover {
+    background-color: #24a4ff;
+    border: solid 5px #006ebd;
+}

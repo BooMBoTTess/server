@@ -1,0 +1,394 @@
+/* обнулила все отступы и шрифт классический поставила */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #B4C7D9;
+    min-block-size: 100vh;
+}
+a {
+    text-decoration: none;
+}
+iframe {
+    border: none;
+    height:1581px;
+    width:100%;
+}
+
+/* центрирование и обнуления блока регистрации */
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+/* подключение шрифтов с сайта https://fonts.google.com/specimen/Lato?query=lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+/* все для шапки, только нужно утвердить шрифт */
+header {
+    padding-top: 30;
+    display: flex;
+    justify-content: space-between;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+    padding-block: 1em;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    .grid {
+        margin-inline: auto;
+        max-inline-size: 500em;
+    }
+
+    .navigation__list {
+        list-style: none;
+        color: lightgrey;
+        font-size: 18px;
+        font-family: 'Lato';
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation__item {
+        max-width: 500px;
+    }
+
+    .navigation__list--inline {
+        display: flex;
+        gap: 1.5em;
+    }
+
+    .navigation__link {
+        color: white;
+        display: block;
+        padding-inline: 1em;
+    }
+
+    .navigation__link--is-active {
+        background-color: #000;
+        border-radius: 999em;
+        color: #fff;
+    }
+
+    .navigation__link {
+        position: relative;
+    }
+
+    .navigation__link:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -2px;
+        right: -2px;
+        bottom: -1px;
+        border-radius: 999em;
+        background-color: rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .navigation__link:hover:before {
+        opacity: 1;
+    }
+}
+
+/* страница регистрации */
+main {
+
+    /* весь блок (центрирование и отступы) */
+    .registration_container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
+
+    /* блок регистрации (внутреннее центрирование, рамка, тени рамки) */
+    .registration_form {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        width: 550px;
+        height: 610px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 5px 10px 50px 0px rgb(9, 39, 86);
+    }
+
+    .data-entry {
+        height: inherit;
+        padding: 30px;
+    }
+
+    /* отступ сверху для всех элементов блока регистрации, кроме первого */
+    .form_block:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    /* редактирование этикеток (Имя пользователя) */
+    .form_block label {
+        color: var(--Blue_01, #1F3F68);
+        font-family: 'Lato';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.64px;
+    }
+
+    /* редактирование вводимых данных */
+    .form_block input {
+        border-radius: 10px;
+        border: 1px solid var(--blue_03, rgb(9, 39, 86));
+        opacity: 0.4;
+        margin-top: 10px;
+        width: 99%;
+        height: 30px;
+        font-size: 15px;
+        font-family: 'Lato';
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.64px;
+        color: var(--Blue_01, #1F3F68);
+        padding: 10px;
+    }
+
+    /* редактирование вводимых данных */
+    .form_block select {
+        margin-top: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--blue_03, rgb(9, 39, 86));
+        opacity: 0.4;
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        font-family: 'Lato';
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.64px;
+        color: var(--Blue_01, #1F3F68);
+        padding: 7px;
+    }
+
+    /* редактирование кнопки */
+    .data-entry button {
+        width: 490px;
+        height: 50px;
+        margin-top: 40px;
+        border-radius: 10px;
+        background: var(--blue_04, rgb(9, 39, 86));
+        box-shadow: 5px 20px 50px 0px rgb(9, 39, 86);
+        border: 0;
+        color: #FFF;
+        font-family: 'Lato';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.64px;
+    }
+
+    .data-entry button:hover {
+        background-color: rgb(7, 7, 64);
+    }
+}
+
+/* страница отделов */
+.home {
+    /* выстраивание блоков с отделами */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* редактирование вводного текста */
+    h1 {
+        font-family: 'Lato';
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 30px;
+        letter-spacing: 0.64px;
+        color: white;
+        width: 800px;
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 0;
+    }
+
+    /* оболочка всех карточек с отделами, их распределение */
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1800px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 64px;
+    }
+
+    /* отступ снизу у каждой карточки */
+    .card-grid-space {
+        margin-bottom: 25px;
+    }
+
+    /* редактирование карточки отдела */
+    .card {
+        font-family: 'Lato';
+        border-radius: 15px;
+        padding: 15px;
+        --bg-filter-opacity: 0.2;
+        background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+        height: 300px;
+        width: 400px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        border: 10px solid #ccc;
+        text-decoration: none;
+
+    }
+
+    /* редактирование карточки отдела */
+    .card h1 {
+        padding: 0;
+        width: 350px;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.64px;
+        text-align: left;
+        margin: 0;
+    }
+
+    /* редактирование карточки отдела */
+    .card p {
+        font-size: 16px;
+        font-family: 'Lato';
+        margin: 0px;
+        padding: 0px;
+        line-height: 25px;
+        font-weight: 400;
+    }
+
+    /* редактирование карточки отдела */
+    .card b {
+        font-size: 27px;
+        font-family: 'Lato';
+        font-weight: 400;
+    }
+
+    /* редактирование карточки отдела при наведении*/
+    .card:before,
+    .card:after {
+        content: '';
+        transform: scale(0);
+        transform-origin: top left;
+        border-radius: 50%;
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        z-index: -5;
+        transition: all, var(--transition-time);
+        transition-timing-function: ease-in-out;
+    }
+
+    /* редактирование карточки отдела при наведении*/
+    .card:before {
+        background: #ddd;
+        width: 250%;
+        height: 250%;
+    }
+
+    /* редактирование карточки отдела при наведении*/
+    .card:after {
+        background: white;
+        width: 200%;
+        height: 200%;
+    }
+
+    /* редактирование карточки отдела при наведении*/
+    .card:hover {
+        color: var(--color);
+    }
+
+    /* редактирование карточки отдела при наведении*/
+    .card:hover:before,
+    .card:hover:after {
+        transform: scale(1);
+    }
+}
+
+/* страница департамента */
+main{
+    .department_container{
+        display: flex;
+
+        justify-content: center;
+        width: 100%;
+        flex-flow: wrap;
+    }
+    .department_card{
+        height: auto;
+        min-width: auto;
+        width: 24%;
+
+        background-color: #222831;
+
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 10px 5px 5px grey;
+        color: white;
+        margin: 5px;
+}
+    .card__name {
+      margin-top: 15px;
+      font-size: 1.5em;
+      height: 3em;
+    }
+    .card__image {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        border: 5px solid #272133;
+        margin-top: 20px;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 1);
+    }
+
+    .btn {
+        color: #f5f5f5;
+        background: none;
+        border: solid #58cdd1;
+        cursor: pointer;
+        font: 700 1.2rem 'Roboto Slab', sans-serif;
+        padding: 0.75em 2em;
+        letter-spacing: 0.05rem;
+        margin: 0.5em;
+        width: 70%;
+        }
+    .btn:hover {
+        background: #58cdd1;
+        }
+
+    .dep_title {
+        color: black;
+        text-align: center;
+        padding: 5px;
+        background-color: white;
+        margin: 10px 50px 20px;
+        border-radius: 50px;
+        height: auto;
+    }
+}
+
+
+
